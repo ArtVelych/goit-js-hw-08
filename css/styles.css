@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
 ul {
     list-style-type: none;
 }
@@ -7,19 +14,25 @@ ul {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 20px 20px;
+    gap: 20px 24px;
     padding: 0;
 }
 
 .gallery-item {
-    width: calc((100% - 88px) / 3);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    transition: transform 500ms ease-in-out;
 }
 
-.gallery-image {
-    width: 100%;
-    height: auto;
+.gallery-item:hover {
+    transform: scale(1.045);
 }
 
 .gallery-link {
+    display: block;
+}
+
+.gallery-image {
+    width: 360px;
+    height: 200px;
     display: block;
 }
